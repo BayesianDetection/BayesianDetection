@@ -15,7 +15,7 @@ This project is for the paper "Detecting Adversarial Examples with Bayesian Neur
 
 ## Pre-trained Models
 
-Please check the google drive [link](https://drive.google.com/drive/folders/1PtxGooAU6RnGYZfQYHlT3HnOK-gY088n?usp=sharing)
+Please check the google drive [link](https://drive.google.com/drive/folders/1ebVkAKPGS7Zy0J_UoED6eJjECNjKFvS3)
 
 
 ## Detecting Adversarial Samples
