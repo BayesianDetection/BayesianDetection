@@ -13,6 +13,7 @@ from sklearn import metrics
 from sklearn.decomposition import PCA
 import pickle as pk
 
+torch.manual_seed(126)
 
 parser = argparse.ArgumentParser(description='PyTorch Getting Probabilities')
 parser.add_argument('--model', default='nn', type=str, help='model name')
