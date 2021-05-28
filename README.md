@@ -39,3 +39,6 @@ CUDA_VISIBLE_DEVICES=0 python3 generate_adv_samples.py --root ${root} --model bn
 ```
 CUDA_VISIBLE_DEVICES=0 python3 get_auc.py --model bnn --net vgg --data cifar10 --adv_type PGD
 ```
+## Other
+
+Random see is included in the script, but change it does not change the results much.
