@@ -20,9 +20,6 @@ def _cdf_distance(u_values, v_values):
     
     # Get the respective positions of the values of u and v among the values of
     # both distributions.
-    # u_cdf_indices = u_values[u_sorter].searchsorted(all_values[:-1], 'right')
-    # v_cdf_indices = v_values[v_sorter].searchsorted(all_values[:-1], 'right')
-
     
     u_cdf_indices = torch.searchsorted(u_values[u_sorter], all_values[:-1], right=True)
     v_cdf_indices = torch.searchsorted(v_values[v_sorter], all_values[:-1], right=True)
