@@ -1,5 +1,4 @@
 import os
-#os.chdir(r'D:\yaoli\bayes_detect')
 import torch
 import argparse
 import numpy as np
@@ -24,7 +23,7 @@ parser.add_argument('--adv_type', default='PGD', type=str, help='dataset name')
 parser.add_argument('--resume', action='store_false', help='resume')
 parser.add_argument('--stat', default='min', type=str, choices=['min','mean','median'],help='test statistic')
 parser.add_argument('--batch_size', default=100, type=int, help='batch size')
-parser.add_argument('--N', default=1000, type=int, help='num of adv samples to generate')
+parser.add_argument('--N', default=10000, type=int, help='num of adv samples to generate')
 parser.add_argument('--L', default=1.0, type=float, help='lambda for pgd_detect')
 opt = parser.parse_args()
 
