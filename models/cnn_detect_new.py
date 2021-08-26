@@ -11,10 +11,6 @@ from models.wass_loss import torch_wasserstein_distance
 from sklearn.decomposition import PCA
 import pickle as pk
 
-
-# def wasserstain_distance_approx(a, b):
-#     return torch.mean(a-b)
-
 def logistic_predict_prob(dist, coef, intercept):
     scores = torch.matmul(dist.type(torch.cuda.DoubleTensor), coef) + intercept
     probs = 1/(1+torch.exp(-scores))
@@ -44,7 +40,7 @@ def get_dist(outf, layer,result_j, predicted, sample_size, criteria):
         data_train_sample_i = torch.tensor(data_train_sample_i).cuda()
         dist = torch.zeros(data_train_sample_i.shape[0])
         for k in range(data_train_sample_i.shape[0]):
-            #dist[k] = torch_wasserstein_loss(final_adv[i,:], data_train_sample_i[k,:],final_adv[i,:].shape[0])
+            #dist[k] = wasserstein_distance(final_adv[i,:], data_train_sample_i[k,:],final_adv[i,:].shape[0])
             dist[k] = torch_wasserstein_distance(final_adv[i,:], data_train_sample_i[k,:])
         if criteria == 'mean':
             dis_adv = dist.mean()
